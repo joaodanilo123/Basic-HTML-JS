@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>João Danilo</title>
+	<link rel="icon" type="image/png" href="madara.png">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="lateral.css">
+	<link rel="stylesheet" type="text/css" href="corpo.css">
+	<script type="text/javascript" src="C:\Users\JDZD\Documents\João\programação\functions.js"></script>
+	<style>
+		.container{
+			position: fixed;
+			height: 100%;
+			width: 200px;
+			background-color: red;
+			display: block;
+		}
+		#hard{
+			width: 20%;
+			height: 300px;
+			background: #393b42;
+			position: fixed;
+			bottom: 0;
+			border-radius: 8px;
+			padding-left: 30px;
+			padding-top: 0px;
+			line-height: 40px;
+			margin-left: 250px;
+			display: none;
+				
+		}
+		#hard:hover{
+			display: table-cell;
+		}
+		.desafio {
+			border-bottom: 1px solid white;
+  			color: white;
+  			padding-bottom: .25em;
+  			text-decoration: none;
+		}
+		.desafio:hover {
+			background-image:
+				 url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='#ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  			background-position: bottom;
+  			background-repeat: repeat-x;
+ 			background-size: 20%;
+  			border-bottom: 0;
+  			padding-bottom: .3em;
+ 			text-decoration: none;
+		}
+	</style>
+	<script>
+		function mostrar(valor) {
+			document.getElementById('hard').style.display = valor
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div id='hard' onmouseover="mostrar('block')" onmouseout="mostrar('none')">
+		<a href="http://inf.fw.iffarroupilha.edu.br/~joao.danilo/cotas/" class="desafio">Cotas</a>
+		<br>
+		<a href="http://inf.fw.iffarroupilha.edu.br/~joao.danilo/senha/" class="desafio"> Descobrir Senha</a>
+		<br>
+		<a href="http://inf.fw.iffarroupilha.edu.br/~joao.danilo/auxilio/" class="desafio">Auxílio estudantil</a>
+		<br>
+		<a href="http://inf.fw.iffarroupilha.edu.br/~joao.danilo/pegadinha/" class="desafio">Pegadinha</a>
+		<br>
+		<a href="http://inf.fw.iffarroupilha.edu.br/~joao.danilo/Rifa/" class="desafio">Gerador de rifa</a>
+		<br>
+		<a href="http://inf.fw.iffarroupilha.edu.br/~joao.danilo/mapa/" class="desafio">Onde eu moro?</a>
+		</div>
+	</div>
+	<table id='lateral'>
+		<td class="tdperfil">
+			<img id="perfil" src="foto.jpg">
+		</td>
+		</tr>
+		<tr>
+			<td class="opc">
+				<a class="links" href="http://inf.fw.iffarroupilha.edu.br">Home</a>
+			</td>
+		</tr>
+		
+		<tr>	
+			<td class="opc">
+				<a class="links" href="https://steamcommunity.com/id/joaodanilo">Steam</a>
+			</td>	
+		</tr>
+		<tr>	
+			<td class="opc">
+				<a class="links" href="https://www.facebook.com/joaodanilo.zucolotto">Facebook</a>
+			</td>
+		</tr>
+		<tr>	
+			<td class="opc" id="desafios">
+				<p class="links" onmouseover="mostrar('table-cell')" onmouseout="setTimeout(mostrar('none'), 3000)">Desafios</p>
+			</td>
+		</tr>
+	</table>
+	<div id="corpo">
+		<h2 style="font-family: RobotoM">Bem Vindo á minha página pessoal!</h2>
+		<p>
+			Meu nome é João Danilo. Gosto muito de comer, dormir, jogar e assitir séries e animes!
+		</p>
+		<p>
+			Moro em Capão do Cipó e atualmente sou estudante do Instituto Federal Farroupilha, tendo cursado um semestre de MSI e começando meu segundo semestre no curso integrado de Técnico em Informática. Planejo seguir carreira na área de desenvolvimento de softwares!
+		</p>
+	</div>	
+</body>
+</html>

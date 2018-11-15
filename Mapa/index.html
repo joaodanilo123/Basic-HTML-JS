@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onde eu moro</title>
+	<style>
+		:root{
+			font-family: Calibri;
+		}
+		#map-canvas {
+			width: 800px;
+			height: 600px;
+			background: red;
+		}
+	</style>
+	
+	<script src="https://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+	<script>
+		var casaJoao = new google.maps.LatLng(-28.935240, -54.556808);
+ 		function initialize() {
+ 		var mapOptions = {
+ 		center: casaJoao,
+ 		zoom: 18,
+ 		mapTypeId: google.maps.MapTypeId.SATELLITE
+ 		};
+ 		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+ 		var marcador = new google.maps.Marker({
+ 			position: casaJoao,
+ 			map: map,
+ 			title: 'Minha casa!!'
+ 		})
+ 		}
+
+ 		google.maps.event.addDomListener(window, 'load', initialize); 
+	</script>
+</head>
+<body>
+	<h1>Onde eu moro?</h1>
+	<div id="map-canvas">oi</div>
+</body>
+</html>

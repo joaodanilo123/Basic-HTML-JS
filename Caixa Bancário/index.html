@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Caixa Eletrônico</title>
+	<script>
+		var saldo = 0
+		var saques = 0
+		
+		function depositar() {
+			
+			var quanto = parseFloat(prompt("Quanto deseja Depositar?"))
+			
+			if (quanto > 2000) {
+			
+				alert("não é possível depositar mais de R$2000,00 por dia")
+			
+			} else {
+			
+				saldo = saldo + quanto
+				alert("Depósito Bem sucedido.")
+			}
+		}
+		
+		function checar(){
+			
+			var senha = prompt("Digite a Senha")
+			
+			alert("Seu saldo é de R$" + saldo)
+		}
+		function taxa(){
+		 	
+		 	saques++
+		 	
+		 	if (saques >= 4 ) {
+		 		saldo = saldo - 1.5
+		 	}
+		} 
+		function saque(){
+			var senha = prompt("Digite a Senha")
+			
+			var sacar = prompt("Digite quanto deseja sacar")
+			
+				if (sacar > 1500) {
+				
+					alert("O saque máximo diário é de R$1500,00")
+				
+				} else if (sacar > saldo) {
+				
+					alert("Saldo insuficiente")
+				
+						} else {
+				
+							saldo = saldo - sacar
+				
+							alert("Saque bem sucedido.Seu saldo atual é de R$" + saldo + ",00" )
+						}
+				taxa()
+				
+				nt100 = parseInt(sacar/100)
+				rst100 = parseInt(sacar%100)
+			
+				nt50 = parseInt(rst100/50)
+				rst50 = parseInt(rst100%50)
+			
+				nt20 = parseInt(rst50/20)
+				rst20 = parseInt(rst50%20)
+			
+				nt10 = parseInt(rst20/10)
+				rst10 = parseInt(rst20%10)
+			
+				nt5 = parseInt(rst10/5)
+				rst5 = parseInt(rst10%5)
+				
+				alert("serão sacadas\n" + nt100 + " Notas de R$100\n" + nt50 + " Notas de R$50\n" + nt20 + " notas de R$20\n" + nt10 + " Notas de R$10\n" + nt5 + " Notas de R$5\n" )
+		}		
+	</script>
+	<style>
+		div {
+			font-family: Calibri;
+			text-align: center;
+			line-height: 40px;
+			border: 3px solid black;
+			padding: 20px;
+			margin: auto;
+			width: 400px;
+			height: 300px;
+			border-radius: 20px;
+			background: #59ffd2;
+		}
+		button {
+			font-size: 14px;
+			font-family: Calibri;
+			width: 100px;
+			background: #1d3487;
+			border: 1px solid black;
+			transition-property: border, background;
+			transition-duration: 0.3s;
+			color: white;
+		}
+		button:hover {
+			border: 2px solid #1d3487;
+			background: #007fff;
+			transition-property: border, background;
+			transition-duration: 0.3s;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Caixa Eletrônico</h1><hr>
+		<button onclick="depositar()">Depositar</button><br>
+		<button onclick="checar()">Checar Saldo</button><br>
+		<button onclick="saque()" >Sacar</button><br>
+	</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Inscrição</title>
+	<script>
+		function limpa(){
+			document.getElementById('nome').value = ""
+			document.getElementById('idade').value = "";
+			document.getElementById('h').checked = true;
+			document.getElementById('mod').value = "";
+			document.getElementById('alt').value = "";
+			
+		}
+		function conf() {
+			if (document.getElementById('h').checked == true) {
+				alert("Você confirma esses dados? \n " + "Nome: " + document.getElementById('nome').value +"\n" + "Idade: " + document.getElementById('idade').value + "\n" +"Sexo: Masculino \n" + "Modalidade: " + document.getElementById('mod').value + "\n" + "Altura: " + document.getElementById('alt').value)
+				alert("Você não é qualificado para participar das Olimpiadas")
+			} else {
+				alert("Você confirma esses dados? \n " + "Nome " + document.getElementById('nome').value + "\n" + "Idade: " + document.getElementById('idade').value +"\n" + "Sexo: Feminino \n" + "Modalidade: " + document.getElementById('mod').value + "\n" + "Altura: " + document.getElementById('alt').value)
+				alert("Você não é qualificada para participar das Olimpiadas")
+			}
+		}
+		
+	</script>
+	<style>
+		body {
+			font-family: Impact;
+			color: darkblue;
+			background: lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<center><h1>Olimpiadas IFFAR Frederico Westphalem</h1>
+	<h2>Página de inscrição</h2>
+	<hr>
+	Nome: <input type="text" id="nome"><br><br>
+	Idade:<input type="number" id="idade"><br><br><br>
+	Sexo: <input type="radio" name="sexo" id="h" checked="true">Masculino
+		  <input type="radio" name="sexo" id="m">Feminino<br><br><br>
+	Altura:<input type="text" id="alt"><br><br><br>
+	Modalidade: <select id="mod">
+					<option value="" disabled selected hidden>Escolha</option>
+					<option value="Futsal"  >Futsal</option>
+					<option value="Vôlei"   >Vôlei</option>
+					<option value="Basquete">Basquete</option>
+				</select><br><br>
+	<button id="conf" onclick="conf()">Confirmar</button><br><br>
+	<button id="conf" onclick="limpa()">Limpar campos</button>
+</body>
+</html>

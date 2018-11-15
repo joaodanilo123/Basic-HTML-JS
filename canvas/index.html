@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gerador de arte</title>
+	<style type="text/css">
+		body {
+				text-align: center;
+				font-family: Calibri;
+		}
+		canvas {
+				border-radius: 10px;
+				border: 5px solid black;
+		}
+		button {	
+				background: white;
+				border: 3px solid red;
+				font-family: Calibri;
+				transition-property: background, color;
+				transition-duration: 0.4s;
+				color: red;
+				border-radius: 10px;
+				cursor: pointer;
+		}
+		button:hover {
+				background: red;
+				color: black;
+				border: 3px solid #a50e0e;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		function randomChoice(lista) {
+ 			 return lista[Math.floor(Math.random() * lista.length)];
+		}	
+
+ 		var cores = ['yellow', 'red', 'blue', 'green', 'purple', 'darkblue', 'pink']
+
+ 		function sleep(ms) {
+  			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+
+		async function gerar(){
+			while(1 == 1) {
+
+ 				var x = Math.random() * 800
+ 				var y = Math.random() * 600
+ 				contexto.beginPath()
+ 				contexto.moveTo(0, 0)
+ 				contexto.lineTo(x, y)
+ 				contexto.closePath()
+				
+				contexto.stroke()
+ 				contexto.strokeStyle = randomChoice(cores)
+
+ 				contexto.beginPath()
+ 				contexto.moveTo(800, 600)
+ 				contexto.lineTo(x, y)
+ 				contexto.closePath()
+
+				contexto.stroke()
+ 				contexto.strokeStyle = randomChoice(cores)
+ 				await sleep()
+ 			}
+ 		}
+	</script>
+</head>
+<body  id="body">
+	<h1>Faça o computador preencher o quadro!</h1>
+	<button onclick="gerar()">Preencher</button><br><br>
+	<center><canvas id="desenho" width="800" height="600"></canvas>
+<script>
+
+	var desenho = document.getElementById('desenho')
+	var contexto = desenho.getContext("2d")
+	var body = document.getElementById('body')
+
+</script>
+</body>
+</html>

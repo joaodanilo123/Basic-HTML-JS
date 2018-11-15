@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nota</title>
+	<script type="text/javascript">
+		function checar() {
+			var nota1 = document.getElementById("nota1").value
+			var nota2 = document.getElementById("nota2").value
+			var media
+			var media1
+			if (nota2 != '') {
+				media = parseInt(nota1) + parseInt(nota2)
+				media1 = media/2
+				if (media1>=7) {
+					alert("PARABENS CUZA1 PASSO")
+				} else {
+					var aia = confirm("VC NAO PASSOU QUER SABER QUANTO PRECISA TIRAR NA AIA SEU BOSTA")
+					if (aia == true) {
+							var mediao = media1 * 0.6
+							var aia1 = 5 - mediao
+							alert("VC PRECISA"+ aia1.toFixed(1) +" PRA PASSAR")
+					} else {
+						alert("VSF ENTAO ARROMBADO")
+					}
+				}
+			} else {
+				var nota22 = nota1 * 0.4
+				var final = nota22/0.6
+				alert("VC PRECISA "+ final.toFixed(1) +" PRA PASSAR SEM AIA")
+			}
+		}
+
+
+	</script>
+	<style>
+		body {
+			text-align: center;
+			line-height: 30px;
+			font-family: Calibri;
+			font-size: 30px;
+		}
+
+	</style>
+</head>
+<body onload="init()">
+	Digite a nota do primeiro semestre:<input type="number" id="nota1"><br>
+	Digite a nota do segundo semestre:<input type="number" id="nota2"><br>
+	<button onclick="checar()">Checar</button>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Testar senha</title>+
+	<script type="text/javascript" src="C:\Users\JDZD\Documents\João\programação\functions.js"></script>
+	<script type="text/javascript" src="http://inf.fw.iffarroupilha.edu.br/~bruno/disciplinas/programacao1/desafios/senha/validar_senha.js"></script>
+	<script>
+		var nome = 'Joao'
+		var alfabeto = 'abcdefghijklmnopqrstuvwxyz'
+		var senha = 'z1234'
+		function testar() {
+
+			if(testarSenha(nome, senha) == false){
+				
+				var tentativas = 0
+				
+				while(testarSenha(nome, senha) == false) {
+					
+					var d1 = alfabeto.charAt(parseInt(Math.random() * 27));
+					
+					var da = randomicoAte(9)
+					var d2 = da.toString()
+			
+					var db = randomicoAte(9)
+					var d3 = db.toString()
+			
+					var dc = randomicoAte(9)
+					var d4 = dc.toString()
+
+					var de = randomicoAte(9)
+					var d5 = de.toString()
+
+					senha = d1 + d2 + d3 + d4 + d5
+					
+					if (testarSenha(nome, senha) == false) {
+						
+							paragrafo(senha)
+					}
+
+					if (testarSenha(nome, senha) == true) {
+						alert('A senha é ' + senha)
+						alert('Foram ' + tentativas + ' tentativas erradas')
+						break
+					}
+					
+					tentativas++
+				}	
+			}
+		}
+	</script>
+</head>
+<body>
+<center>
+<button onclick="testar()">Descobrir senha</button>
+Digite o nome do úsuario <input type="text" value="Joao" readonly>
+</center>
+</body>
+</html>

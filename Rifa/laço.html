@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Rifa</title>
+	<style>
+		.celula {
+			width: 600px;
+			height: 300px;
+			margin: auto;
+			border: 2px solid black;
+			padding: 5px;
+			font-family: Arial;
+		}
+		#num {
+			text-align: right;
+		}	
+		#titulo {
+			text-align: center;
+			font-size: 30px;
+		}
+		.nt {
+			text-align: right;
+		}
+		span {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		//Variaveis
+			var quantasRifas = parseInt(prompt("Quantos números você deseja fazer?"))
+			
+			var nomeRifa = prompt("Qual o nome da rifa? Ex. Rifa Beneficinte Para o Lar de Idosos")
+			
+			var premio = prompt("Qual(is) o(s) prêmio(s) da rifa?")
+			
+		//Laço
+				for (base = 1;  base <= quantasRifas; base++) {
+				
+				document.write("<div class='celula'><p id='titulo'>" + nomeRifa +"</p><hr><p id='num'>Número: " + "<span>" + base + "</span>" + "</p><p>Prêmio(s):" + premio + "<p><p class='nt'>Nome:__________________</p><p class='nt'>Telefone:(___)__________________</p></div><br>")
+				}
+	</script>
+</body>
+</html>

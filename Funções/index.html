@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Hoje é natal</title>
+
+	<script>
+        // utilizando "Date"
+		function verificarNatal() {
+            var natal = new Date
+                if (natal.getMonth() == 11 && natal.getDate() == 25) {
+                    document.getElementById('natal').value = "Sim :)"
+                    } else {
+                    document.getElementById('natal').value = "Não :("
+                }
+        }
+        // utilizando "Math"
+        function raizq() {
+            var bas = parseInt(document.getElementById('num1').value)
+            var expo = parseInt(document.getElementById('num2').value)
+            document.getElementById('resultado').value = Math.pow(bas, expo) 
+        }
+        //utilizando metodos de string
+        function contar() {
+            var stri = document.getElementById('stri').value
+            document.getElementById('total').value = stri.length
+        }
+    </script>
+    <style>
+        #nat {
+            position: absolute;
+            top: 25px;
+            margin-left: 500px;
+            margin-right: 500px;
+            border: 2px solid black;
+            width: 400px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: #5686d3;
+        }
+        #rq {
+            position: absolute;
+            margin-left: 500px;
+            margin-right: 500px;
+            top: 150px;
+            background-image: linear-gradient(yellow,yellow);
+            border: 2px solid black;
+            width: 400px;
+            height: 130px;
+            text-align: center;
+            line-height: 40px;
+        }
+        #conta {
+            position: absolute;
+            margin-right: 500px;
+            margin-left: 500px;
+            width: 400px;
+            height: 150px;
+            text-align: center;
+            top: 300px;
+            background-color: red;
+            border: 2px solid black;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nat">
+	   <button onclick="verificarNatal()" id="testnatal">Hoje é natal?</button>
+	   <input type="text" id="natal" readonly>
+    </div>
+    <div id="rq">
+        Insira um Número(base) :<input type="number" id="num1" placeholder="Ex.9"><br>
+        Insira outro Número(expoente) :<input type="number" id="num2" placeholder="Ex.2"><br>
+        <button onclick="raizq()">Conferir potenciação</button>
+        <input type="number" id="resultado" readonly>
+    </div>
+    <div id="conta">
+        <br>Insira uma frase/palavra:<input type="text" id="stri"><br><br>
+        <button onclick="contar()">Conte quantas letras existem aí</button><br><br>
+        <input type="text" id="total" readonly>
+    </div>
+</body>
+</html>

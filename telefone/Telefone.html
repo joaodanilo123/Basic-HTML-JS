@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Telefone</title>
+	<script>
+		var numCompleto = ""
+
+		function numero(num) {
+			document.getElementById('tela').value =document.getElementById('tela').value + document.getElementById(num).value
+			numCompleto = document.getElementById('tela').value
+		}
+		function ligar(){
+			if (numCompleto == "") {
+				alert("Por favor, digite um número válido")
+			} else {
+				alert("Chamando "+numCompleto+"... TUTUTU está ocupado :(")
+			}
+		}
+		function zero(){
+			document.getElementById('tela').value =document.getElementById('tela').value + document.getElementById('0').value
+		}
+		function desligar(){
+			document.getElementById('tela').value = ""
+			numCompleto = ""
+		}
+
+	</script>
+</head>
+<body>
+	<h1 align="center"> Bem-vindo ao telefone gratuito</h1>
+	<p align="center">coloque o número e é só ligar :)</p>
+	<center><input type="number" id="tela" 	style="width: 150px; height: 50px;" readonly><br>
+	<input type="button" value="1"     id="1" 	 	 style="width: 50px; height: 50px " onclick="numero('1')">
+	<input type="button" value="2"     id="2" 		 style="width: 50px; height: 50px " onclick="numero('2')">
+	<input type="button" value="3"     id="3" 	     style="width: 50px; height: 50px " onclick="numero('3')"><br>
+	<input type="button" value="4"     id="4" 	     style="width: 50px; height: 50px " onclick="numero('4')">
+	<input type="button" value="5"     id="5" 	     style="width: 50px; height: 50px " onclick="numero('5')">
+	<input type="button" value="6"     id="6" 	     style="width: 50px; height: 50px " onclick="numero('6')"><br>
+	<input type="button" value="7"     id="7" 	     style="width: 50px; height: 50px " onclick="numero('7')">
+	<input type="button" value="8"     id="8" 	     style="width: 50px; height: 50px " onclick="numero('8')">
+	<input type="button" value="9"     id="9" 	     style="width: 50px; height: 50px " onclick="numero('9')"><br>
+	<input type="button" value="lig."  id="ligar"    style="width: 50px; height: 50px " onclick="ligar()">
+	<input type="button" value="0"     id="0" 		 style="width: 50px; height: 50px " onclick="numero('0')">
+	<input type="button" value="desl." id="desligar" style="width: 50px; height: 50px " onclick="desligar()"><br></center>
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Cotas</title>
+	<style>
+		#botão {
+			font-family: Century Ghotic;
+			font-size: 42px;
+			color: black;
+			background: url(espaço.jpg);
+			border: 1px solid black;
+			width: 640px; height: 300px;
+			box-shadow: 10px 10px 2px black;
+		}
+		body{
+			background: url(fundo.jpg);
+		}
+	</style>
+	<script>
+		function cota() {
+			var ensino = prompt("Você cursou o ensino fundamental em escola pública? Responda sim ou não.")
+			var rendab = prompt("Sua família tem uma renda menor/igual a um salário mínimo e meio por pessoas?Responda sim ou não.")
+			var cor = prompt("Você se considera Preto, Pardo ou Indígena? Responda sim ou não.")
+			var deficiencia = prompt("Você possui alguma deficiência? Responda sim ou não.")
+			if (ensino == "não") {
+				alert("Se inscreva na ampla concorrência.")
+			} else {
+				if (rendab == "sim") {
+					if (cor == "sim") {
+						if (deficiencia == "sim") {
+							alert("Se inscreva na cota 1")
+						} else {
+							alert("Se inscreva na cota 2")
+						}
+
+					} else {
+						if (deficiencia == "sim") {
+							alert("Se inscreva na cota 3")
+						} else {
+							alert("Se inscreva na cota 4")
+						}
+					}
+				} else {
+					if (cor == "sim") {
+						if (deficiencia == "sim") {
+							alert("se inscreva na cota 5")
+						} else {
+							alert("se inscreva na cota 6")
+						}
+
+					} else {
+						if (deficiencia == "sim") {
+							alert("Se inscreva na cota 7")
+						} else {
+							alert("se inscreva na cota 8")
+						}
+					}
+				}
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<center><br><br><br><br><br><br><br><br>
+	<button onclick="cota()" id="botão"> Qual minha cota?</button>
+</body>
+</html>

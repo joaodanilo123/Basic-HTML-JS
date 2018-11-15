@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="utf-8">
+<head>
+	<title>Você pode ganhar auxilio estudantil?</title>
+	<script>
+		function checar() {
+			var nome = document.getElementById('nome').value
+			var rpc = document.getElementById('rb').value / document.getElementById('pessoas').value
+			var agravantes = 0
+			if (rpc > 1431) {
+				alert(nome + ", a renda per capita de sua família é maior que um salário mínimo e meio. Você não pode concorer ao auxílio estudantil.")
+			} else {
+					if (document.getElementById('ft1').checked == true) {
+					agravantes = agravantes + 1
+				}
+					if (document.getElementById('ft2').checked == true) {
+					agravantes = agravantes + 1
+				}
+					if (document.getElementById('ft3').checked == true) {
+					agravantes = agravantes + 1
+				}
+					if (document.getElementById('ft4').checked == true) {
+					agravantes = agravantes + 1
+				}
+					if (document.getElementById('ft6').checked == true) {
+					agravantes = agravantes + 1
+				}
+					if (document.getElementById('ft7').checked == true) {
+					agravantes = agravantes + 1
+				}
+					if (document.getElementById('ft2').checked == true) {
+					agravantes = agravantes + 1
+				}
+				var fator = ""
+				switch(agravantes){
+					case 0:
+						fator = 1
+					break;
+
+					case 1:
+						fator = 0.8
+					break;
+
+					case 2:
+						fator = 0.6
+					break ;
+
+					case 3:
+						fator = 0.5
+					break;
+
+					case 4:
+						fator = 0.4
+					break;
+
+					case 5:
+						fator = 0.3
+					break;
+
+					case 6:
+						fator = 0.2
+					break;
+
+					case 7:
+						fator = 0.1
+					break;
+
+					default:
+						alert("ops, ocorreu um erro")
+
+				}
+			var indice = (document.getElementById('rb').value * fator) / (954 * document.getElementById('pessoas').value)
+			alert(nome + ", você pode concorrer ao auxílio estudantil e seu índice é " + indice)
+			}
+		}
+			
+	</script>
+	<style>
+		.body {
+			color: rgb(10,10,10);
+			background-size: 100%;
+		}
+		.div {
+			width: 640px;
+		}
+
+	</style>
+</head>
+<body  background="campo.jpg" class="body">
+	<font face="Arial">
+
+	<center><div align="justify" class="div"><h1>Você pode receber auxílio estudantil?</h1>
+	<hr>
+
+	<h2>Para descobrirmos, vamos precisar de alguns dados seus e de sua família</h2>
+	<hr>
+
+	<h3>Primeiro Nome:<input type="text" id="nome" placeholder="ex.João"></h3>
+	
+	<input type="checkbox" id="ft1" value="1"><strong>Minha família recebe algum beneficio social(ex. Bolsa Família).<br>
+	
+	<input type="checkbox" id="ft2" value="2">Minha família não mora em Frederico Wesphalen.<br>
+	
+	<input type="checkbox" id="ft3" value="3">Minha familia tem gasto com moradia(aluguel,etc).<br>
+	
+	<input type="checkbox" id="ft4" value="4">Um dos integrantes da minha família possui doença crônica.<br>
+	
+	<input type="checkbox" id="ft5" value="5">O principal provedor de renda da familia está desempregado/morto.<br>
+
+	<input type="checkbox" id="ft6" value="6">Alguém na minha familia possui alguma deficiência.<br> 
+
+	<input type="checkbox" id="ft7" value="7">Minha família possui apenas UM provedor de renda.</strong><br>         
+	
+	<p> <strong>Renda Bruta da familia:</strong>R$<input type="number" id="rb" style="width:103px;" placeholder="ex. 2500"></p><br>
+	    <strong>Número de integrantes da família:</strong> <input type="number" id="pessoas" style="width: 40px;" placeholder="ex. 5">
+	<hr>
+
+	<center><input type="button" id="botão" onclick="checar()" value="Checar"></div></center>
+	</font>
+</body>
+</html>

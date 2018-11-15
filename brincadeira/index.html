@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Brincadeira</title>
+	<script type="text/javascript">
+		var cor = ["Branca", "Preta", "Amarela", "Azul", "Roxa", "Bege", "Cinza", "Verde", "Vermelha", "Laranja", "Rosa", "Outra"]
+
+		var de = ["tanque", "busão", "ambulância", "carro funerário", "ZAP", "moto", "cavalo", "fusca", "bicicleta", "camburão", "helicóptero", "tapete mágico", "carrinho de supermercado"]
+
+		var onde = ["New York", "Rio de Janeiro", "Cruzada para tomada de Jerusálem", "Convenção sobre a terra plana", "Frederico Westhphalen", "São Vicente do Sul", "Panelão", "Bar", "Russia", "Alemanha Nazista", "Auschwitz", "Quartel do DOPS", "Palacio do Planalto", "Iraque", "Síria", "Inferno", "Debate Presidencial", "Sede do Google", "Vietnã", "Coréia do Norte", "Missa", "Bahia", "UFSM", "Protesto contra o nazismo", "FUT", "Stripe Tease", "uma rave", "Faixa de Gaza", "Roma Imperial", "Nárnia", "Afeganistão"]
+
+		var com = ["Bolsonaro", "Cabo Daciolo", "Lula", "Goku", "Donald Trump", "Avenged Sevenfold", "ET Bilu", "Algum Terra-Planista",
+		"Mc Zoí de Gato", "Hitler", "Mussolini", "Stálin"]
+
+		function checar(){
+			
+			var mes = document.getElementById('mes').value - 1
+			var dia = document.getElementById('dia').value - 1
+			var camisa = document.getElementById('camisa').value
+
+			document.getElementById("resultado").innerHTML = "Antes de morrer você deve ir à/ao "+onde[dia]+", com o "+com[mes]+", de "+ de[camisa]+'.'
+		}
+
+	</script>
+	<style type="text/css">
+		
+		body{
+					text-align: center;
+					font-family: Arial;
+					font-size: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>O que você deve fazer antes de morrer?</h1>
+
+	Em que mês você nasceu?
+	<select id="mes">
+		<script>
+			
+			for(i=1; i <= 12; i++){
+				
+				document.writeln("<option>"+i+"</option>")
+			
+			}
+		</script>
+	</select>
+	<br>
+
+	Em que dia Você nasceu?
+	<select id="dia">
+		<script>
+			
+			for(i=1; i <= 31; i++){
+				document.writeln("<option>"+i+"</option>")
+			}
+
+		</script>
+	</select>
+	<br>
+
+	Qual a cor da sua camisa?
+	<select id="camisa">
+		<script>
+
+			for(i=0; i <= cor.length-1; i++){
+				document.writeln("<option value='"+i+"'>"+cor[i]+"</option>")
+			}
+
+		</script>
+	</select>
+	<br>
+
+	<button onclick="checar()">Checar</button>
+
+	<div id="resultado"></div>
+</body>
+</html>
