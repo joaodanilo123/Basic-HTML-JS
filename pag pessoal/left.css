@@ -1,9 +1,41 @@
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto-Thin.ttf');
+}
+
+@font-face {
+    font-family: RobotoM;
+    src: url('Roboto-Medium.ttf');
+}
+
+* {
+    font-family: RobotoM;
+}
+
 @media screen and (min-width: 600px) {
     .menu {
         width: 15%;
+        font: bold;
     }
-    .main {
+    .link {
+        font-family: Roboto;
+        height: 10%;
+        font-size: 200%
+    }
+
+    #pub {
+        position: absolute;
+        color: red;
+        text-align: center;
+    }
+    .warning {
         margin-left: 15%;
+        text-align: center;
+        padding-top: 10%;
+        font-size: 500%;
+    }
+    .myphoto {
+        border: 1px solid black;
     }
 }
 
@@ -12,3 +44,4 @@
         display: none;
     }
 }
+

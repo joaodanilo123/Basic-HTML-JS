@@ -11,17 +11,27 @@
     <title>João Danilo</title>
 </head>
 
-<body class="w3-cell-row">
+<body>
     <div class="menu w3-sidebar w3-bar-block w3-black">
-        <a href="#" class="w3-bar-item w3-button">Home</a>
-        <a href="#" class="w3-bar-item w3-button">Github</a>
-        <a href="#" class="w3-bar-item w3-button">Facebook</a>
+        <img src="foto.jpg" title="eu" class="myphoto w3-image">
+
+        <a id='b1' href="#" class="link w3-bar-item w3-button" onmouseover="changeDesc('b1')">Home</a>
+        <a id='b2' href="#" class="link w3-bar-item w3-button" onmouseover="changeDesc('b2')">Github</a>
+        <a id='b3' href="#" class="link w3-bar-item w3-button" onmouseover="changeDesc('b3')">Facebook</a>
+
+        <p id="desc" class="w3-bar-item"></p>
+
     </div>
-    <div class="main w3-container w3-green" style="margin-left: 20%;">
-        <p>
-            Lorem ipsum dolor sitero, voluptatum
+    <div class="main w3-container">
+        <p id='pub'> << Use Linux >> </p>
+        <p class="warning">
+            O VÉI SAI DAQUI MANO
         </p>
     </div>
+    
+
+    <script src="details.js"></script>
+
 </body>
 
 </html>
